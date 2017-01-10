@@ -1,0 +1,38 @@
+Stat Name	Statement Total	Per Execution	% Snap Total
+Elapsed Time (ms)	6,052,830	6,052,830.09	3.25
+CPU Time (ms)	1,632,590	1,632,590.00	4.36
+Executions	1	 	 
+Buffer Gets	31,268,262	31,268,262.00	1.23
+Disk Reads	31,152,232	31,152,232.00	6.64
+Parse Calls	1	1.00	0.00
+Rows	23	23.00	 
+User I/O Wait Time (ms)	2,430,889	 	 
+Cluster Wait Time (ms)	734,239	 	 
+Application Wait Time (ms)	0	 	 
+Concurrency Wait Time (ms)	16	 	 
+Invalidations	0	 	 
+Version Count	2	 	 
+Sharable Mem(KB)	140	 	
+
+
+
+Id	Operation	Name	Rows	Bytes	TempSpc	Cost (%CPU)	Time	Pstart	Pstop
+0	INSERT STATEMENT	 	 	 	 	15M(100)	 	 	 
+1	   LOAD TABLE CONVENTIONAL	 	 	 	 	 	 	 	 
+2	     HASH GROUP BY	 	355K	140M	89G	15M (1)	51:54:39	 	 
+3	       HASH JOIN	 	223M	86G	 	8598K (2)	28:39:44	 	 
+4	         PARTITION LIST SINGLE	 	16871	955K	 	156 (2)	00:00:02	90	90
+5	           TABLE ACCESS FULL	T_S_CRM_AGENT	16871	955K	 	156 (2)	00:00:02	90	90
+6	         HASH JOIN	 	39774	13M	 	8597K (2)	28:39:25	 	 
+7	           TABLE ACCESS FULL	T_S_CRM_INFDEALER	566	33960	 	822 (1)	00:00:10	 	 
+8	           HASH JOIN RIGHT OUTER	 	37574	10M	 	8596K (2)	28:39:15	 	 
+9	             TABLE ACCESS FULL	T_M_DIM_RECHARGE_FACEVALUE	6	240	 	3 (0)	00:00:01	 	 
+10	             HASH JOIN RIGHT OUTER	 	37574	9430K	 	8596K (2)	28:39:15	 	 
+11	               TABLE ACCESS FULL	T_E_CRM_DIC_RES_MODEL	11	154	 	5 (0)	00:00:01	 	 
+12	               HASH JOIN	 	37574	8916K	 	8596K (2)	28:39:15	 	 
+13	                 PARTITION LIST ALL	 	37411	1315K	 	45505 (4)	00:09:07	1	61
+14	                   TABLE ACCESS FULL	T_E_UVC_USEDCARD	37411	1315K	 	45505 (4)	00:09:07	1	61
+15	                 PARTITION LIST ALL	 	306K	60M	 	8550K (2)	28:30:09	1	62
+16	                   TABLE ACCESS FULL	T_E_DEALER_TRANS_DETL_D	306K	60M	 	8550K (2)	28:30:09	1	62
+
+
