@@ -13,7 +13,7 @@ sys.setdefaultencoding('utf-8')
 
 class zabbix_api:
     def __init__(self):
-        self.url = 'http://zabbix.xxx.com/api_jsonrpc.php'
+        self.url = 'http://zabbix.xxx.com/zabbix/api_jsonrpc.php'
         self.header = {"Content-Type":"application/json"}
 
 
